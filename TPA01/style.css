@@ -51,6 +51,8 @@ nav a:hover{
 }
 /* Home */
 .home{
+    margin-right: 10px;
+    margin-left: 50px;
     margin-bottom: 200px;
     display: flex;
     /* align-items: center; */
@@ -58,6 +60,7 @@ nav a:hover{
     padding-top: 80px;
 }
 .home-txt h1{
+    margin-top: 150px;
     font-size: 24px;
     color: gray;
 }
@@ -89,6 +92,7 @@ nav a:hover{
     transition: 0.3s;
 } */
 .home-img img{
+    margin-right: 100px;
     background-color: rgb(35, 18, 54);
     border-radius: 90px;
 }
@@ -98,7 +102,9 @@ nav a:hover{
     filter: hue-rotate(150deg);
     transition: 0.3s;
 }
-/* container */
+
+
+/* Projects*/
 .cards{
     display: flex;
     /* align-items: center; */
