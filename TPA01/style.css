@@ -49,6 +49,7 @@ nav{
 nav a:hover{
     color: blueviolet;    
 }
+/* footer */
 footer{
     margin-top: 50px;
     display: flex;
@@ -106,7 +107,7 @@ footer a{
     margin-top: 50px;
     border-radius: 1000px;
     margin-right: 150px;
-    background-color: rgb(92, 92, 92);
+    background-color: #221531;
 }
 .about-img img:hover{
     box-shadow:  -4px -4px 4px 4px, 4px 4px 4px 4px, 4px 4px 4px 4px, 4px 4px 4px 4px rgba(0,0,0,0.2);
@@ -114,7 +115,6 @@ footer a{
     filter: hue-rotate(150deg);
     transition: 0.3s;
 }
-
 /* Projects*/
 .cards{
     display: flex;
@@ -127,6 +127,7 @@ footer a{
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 250px;
+    height: 400px;
 }
 .card:hover {
     box-shadow: -4px -4px 4px 4px, 4px 4px 4px 4px, 4px 4px 4px 4px, 4px 4px 4px 4px rgba(0,0,0,0.2);
@@ -140,4 +141,22 @@ footer a{
 }
 .container h5{
     font-weight: 500;
+}
+/* blog */
+.blogs{
+    margin-top: 50px;
+    display: flex;
+    flex-direction:column;
+    margin-left: 90px; 
+    padding-right: 50px;
+    /* margin-bottom: 25px; */
+}
+.blog{
+    margin-bottom  : 25px;   
+}
+.blogs img{
+    width: 50%;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
