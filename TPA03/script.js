@@ -1,3 +1,4 @@
+// Show list movie
 let containerMovies = document.getElementById("list-movie")
 let getListMovie = async()=>{
     let response = await fetch("https://api.themoviedb.org/3/discover/movie?api_key=6498a2ab00dfbdea32609eec6bc9f04b&sort_by=popularity.desc")
@@ -18,3 +19,4 @@ let getListMovie = async()=>{
     });
 }
 getListMovie()
+
