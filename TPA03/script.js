@@ -22,12 +22,12 @@ getListMovies()
 
 // search Movie
 
-let form =  document.getElementsByClassName("myForm")
+let form =  document.getElementsByClassName("my-form")
 let search = document.getElementById("search")
 
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
+form.addEventListener('submit', async (event) => {
+    event.preventDefault()
 
     let searchTerm = search.value;
     if(searchTerm) {
@@ -36,4 +36,5 @@ form.addEventListener('submit', (e) => {
         getListMovies("https://api.themoviedb.org/3/discover/movie?api_key=6498a2ab00dfbdea32609eec6bc9f04b&sort_by=popularity.desc")
     }
 })
-
+console.log(form);
+console.log(form);
