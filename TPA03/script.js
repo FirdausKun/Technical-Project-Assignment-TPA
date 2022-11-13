@@ -1,14 +1,14 @@
 // List Movie
 let containerMovies = document.querySelector('#list-movie');
-let getListMovies = async (query) => { 
+let getListMovies = async (query) => { // parameter query dari search
   let response = await fetch(
     query ||
       'https://api.themoviedb.org/3/discover/movie?api_key=6498a2ab00dfbdea32609eec6bc9f04b&sort_by=popularity.desc'
-  ); 
+  ); // kalau ada query pake query kalau gak pake yang default
   let movies = await response.json();
 
   let movieData = movies.results;
-  containerMovies.innerHTML = ''; 
+  containerMovies.innerHTML = ''; // kosongin dulu html nya sebelum di render ulang
   movieData.slice(0, 18).forEach((item) => {
     containerMovies.innerHTML += `<div class="col">
         <div class="card m-5 border-info" style="width: 16rem;">
@@ -21,10 +21,12 @@ let getListMovies = async (query) => {
           </div>`;
   });
 };
+
 getListMovies();
 
 // search Movie
-let form = document.getElementsByClassName('my-form')[0]; 
+
+let form = document.getElementsByClassName('my-form')[0]; // ngambil form di index ke-0
 let search = document.getElementById('search');
 
 form.addEventListener('submit', (e) => {
@@ -34,9 +36,8 @@ form.addEventListener('submit', (e) => {
   if (searchTerm) {
     getListMovies(
       `https://api.themoviedb.org/3/search/movie?api_key=6498a2ab00dfbdea32609eec6bc9f04b&query=${searchTerm}&page=1`
-    ); 
+    ); // kalau ada search kirim ke getList pake argumen
   } else {
-    getListMovies(); 
+    getListMovies(); // kalau ga ada search jalanin default get
   }
 });
-console.log(form);
